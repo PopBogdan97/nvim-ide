@@ -91,7 +91,6 @@ M.on_attach = function(client, bufnr)
     return
   end
   illuminate.on_attach(client)
-  vim.lsp.codelens.refresh()
 end
 
 return M
