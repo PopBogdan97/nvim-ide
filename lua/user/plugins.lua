@@ -69,7 +69,11 @@ return packer.startup(function(use)
   -- Colorschemes
   use { "folke/tokyonight.nvim", commit = "66bfc2e8f754869c7b651f3f47a2ee56ae557764" }
   use { "lunarvim/darkplus.nvim", commit = "13ef9daad28d3cf6c5e793acfc16ddbf456e1c83" }
-
+  use { "LunarVim/Colorschemes", commit = "fd08d338645aa7044e5b80379c33e33a4befbc1c" } -- LunarVim Colorschemes
+  use { "sonph/onehalf", commit = "75eb2e97acd74660779fed8380989ee7891eec56", rtp = "vim" }
+  use { "sainnhe/everforest", commit = "765328360ca61f889709c36e68cd44c11a127093" }
+  -- Dev --
+  use { "preservim/tagbar", commit = "83933d557409639df53fd2ca21484279b5854c1e"}
   -- cmp plugins
   use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" } -- The completion plugin
   use { "hrsh7th/cmp-buffer", commit = "3022dbc9166796b644a841a02de8dd1cc1d311fa" } -- buffer completions

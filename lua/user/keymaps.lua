@@ -22,6 +22,11 @@ keymap("n", "<C-j>", "<C-w>j", opts)
 keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- Tabs --
+keymap("n", "<S-n>", ":tabnew %<cr>", opts)
+keymap("n", "<S-q>", ":tabclose<cr>", opts)
+keymap("n", "<S-o>", ":tabonly<cr>", opts)
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -41,6 +46,8 @@ keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 -- Better paste
 keymap("v", "p", '"_dP', opts)
 
+-- Write file 
+keymap("n", "<leader>w", ":w<CR>", {})
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
@@ -57,12 +64,17 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 
 -- Plugins --
 
+-- Tagbar
+keymap('n', '<leader>t', ":TagbarToggle<CR>", opts)
+-- Rnvimr
+keymap("n", "<leader>r", ":RnvimrToggle<CR>", opts)
+
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
-keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
+keymap("n", "<leader>fw", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 
