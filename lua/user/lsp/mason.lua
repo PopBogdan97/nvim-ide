@@ -1,11 +1,20 @@
 local servers = {
-	"sumneko_lua",
-	"cssls",
-	"html",
-	"tsserver",
 	"pyright",
 	"bashls",
+	"clangd",
+	"cssls",
+	"cssmodules_ls",
+	"html",
+	"jdtls",
 	"jsonls",
+	"lemminx",
+	"sumneko_lua",
+	"remark_ls",
+	"solc",
+	"taplo",
+	"terraformls",
+	"tflint",
+	"tsserver",
 	"yamlls",
 }
 
@@ -13,9 +22,9 @@ local settings = {
 	ui = {
 		border = "none",
 		icons = {
-			package_installed = "◍",
-			package_pending = "◍",
-			package_uninstalled = "◍",
+			package_installed = "✓",
+			package_pending = "➜",
+			package_uninstalled = "✗",
 		},
 	},
 	log_level = vim.log.levels.INFO,

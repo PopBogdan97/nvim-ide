@@ -62,7 +62,7 @@ local function lsp_keymaps(bufnr)
 	keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
 	keymap(bufnr, "n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)
 	keymap(bufnr, "n", "<leader>li", "<cmd>LspInfo<cr>", opts)
-	keymap(bufnr, "n", "<leader>lI", "<cmd>LspInstallInfo<cr>", opts)
+	keymap(bufnr, "n", "<leader>lI", "<cmd>Mason<cr>", opts)
 	keymap(bufnr, "n", "<leader>la", "<cmd>lua vim.lsp.buf.code_action()<cr>", opts)
 	keymap(bufnr, "n", "<leader>lj", "<cmd>lua vim.diagnostic.goto_next({buffer=0})<cr>", opts)
 	keymap(bufnr, "n", "<leader>lk", "<cmd>lua vim.diagnostic.goto_prev({buffer=0})<cr>", opts)
@@ -80,17 +80,17 @@ M.on_attach = function(client, bufnr)
 		client.server_capabilities.documentFormattingProvider = false
 	end
 
-  if client.name == "rust_analyzer" then
-    print("turned on codelens")
-    vim.lsp.codelens.refresh()
-  end
+	if client.name == "rust_analyzer" then
+		print("turned on codelens")
+		vim.lsp.codelens.refresh()
+	end
 
-  lsp_keymaps(bufnr)
-  local status_ok, illuminate = pcall(require, "illuminate")
-  if not status_ok then
-    return
-  end
-  illuminate.on_attach(client)
+	lsp_keymaps(bufnr)
+	local status_ok, illuminate = pcall(require, "illuminate")
+	if not status_ok then
+		return
+	end
+	illuminate.on_attach(client)
 end
 
 return M
