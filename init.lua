@@ -23,3 +23,5 @@ require "user.dap"
 require "user.which-key"
 require "user.fidget"
 require "user.leap"
+
+vim.opt.guifont = { "Source Code Pro", ":h11" } -- Neovide configuration for font size
