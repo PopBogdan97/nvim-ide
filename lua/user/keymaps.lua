@@ -51,7 +51,6 @@ keymap("n", "<leader>w", ":w<CR>", {})
 -- Insert --
 -- Press jk fast to enter
 keymap("i", "jk", "<ESC>", opts)
-keymap("v", "lk", "<ESC>", opts)
 
 -- Visual --
 -- Stay in indent mode
@@ -77,6 +76,11 @@ keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
 keymap("n", "<leader>fw", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
+keymap("n", "<leader>fm", ":Telescope media_files<CR>", opts)
+
+-- Hop
+keymap("n", "s", ":HopChar2<CR>", opts)
+keymap("n", "<leader>ss", ":HopChar2MW<CR>", opts)
 
 -- Git
 keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
@@ -95,3 +99,9 @@ keymap("n", "<leader>dr", "<cmd>lua require'dap'.repl.toggle()<cr>", opts)
 keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
 keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
+
+-- Neovide
+keymap("n", "<C-c>", "+y", opts)
+keymap("v", "<C-c>", "+y", opts)
+keymap("n", "<C-v>", "p", opts)
+keymap("i", "<C-v>", "<C-r>+", opts)

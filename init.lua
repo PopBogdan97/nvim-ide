@@ -22,6 +22,6 @@ require "user.lsp"
 require "user.dap"
 require "user.which-key"
 require "user.fidget"
-require "user.leap"
+require "user.hop"
 
 vim.opt.guifont = { "Source Code Pro", ":h11" } -- Neovide configuration for font size
