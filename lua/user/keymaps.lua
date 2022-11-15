@@ -65,8 +65,17 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 
 -- Tagbar
 keymap('n', '<leader>t', ":TagbarToggle<CR>", opts)
+
+-- Troubble specific keybindings
+keymap("n", "<leader>xx", "<cmd>TroubleToggle<cr>", opts)
+keymap("n", "<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
+keymap("n", "<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
+keymap("n", "<leader>xl", "<cmd>TroubleToggle loclist<cr>", opts)
+keymap("n", "<leader>xq", "<cmd>TroubleToggle quickfix<cr>", opts)
+keymap("n", "gR", "<cmd>TroubleToggle lsp_references<cr>", opts)
+
 -- Rnvimr
-keymap("n", "<leader>r", ":RnvimrToggle<CR>", opts)
+keymap("n", "<leader>re", ":RnvimrToggle<CR>", opts)
 
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
@@ -105,3 +114,24 @@ keymap("n", "<C-c>", "+y", opts)
 keymap("v", "<C-c>", "+y", opts)
 keymap("n", "<C-v>", "p", opts)
 keymap("i", "<C-v>", "<C-r>+", opts)
+
+-- Languages --
+-- Rust specific keybindings
+keymap("n", "<leader>rh", "<cmd>RustSetInlayHints<Cr>", opts)
+keymap("n", "<leader>rhd", "<cmd>RustDisableInlayHints<Cr>", opts)
+keymap("n", "<leader>th", "<cmd>RustToggleInlayHints<Cr>", opts)
+keymap("n", "<leader>rr", "<cmd>RustRunnables<Cr>", opts)
+keymap("n", "<leader>rem", "<cmd>RustExpandMacro<Cr>", opts)
+keymap("n", "<leader>roc", "<cmd>RustOpenCargo<Cr>", opts)
+keymap("n", "<leader>rpm", "<cmd>RustParentModule<Cr>", opts)
+keymap("n", "<leader>rjl", "<cmd>RustJoinLines<Cr>", opts)
+keymap("n", "<leader>rha", "<cmd>RustHoverActions<Cr>", opts)
+keymap("n", "<leader>rhr", "<cmd>RustHoverRange<Cr>", opts)
+keymap("n", "<leader>rmd", "<cmd>RustMoveItemDown<Cr>", opts)
+keymap("n", "<leader>rmu", "<cmd>RustMoveItemUp<Cr>", opts)
+keymap("n", "<leader>rsb", "<cmd>RustStartStandaloneServerForBuffer<Cr>", opts)
+keymap("n", "<leader>rd", "<cmd>RustDebuggables<Cr>", opts)
+keymap("n", "<leader>rv", "<cmd>RustViewCrateGraph<Cr>", opts)
+keymap("n", "<leader>rw", "<cmd>RustReloadWorkspace<Cr>", opts)
+keymap("n", "<leader>rss", "<cmd>RustSSR<Cr>", opts)
+keymap("n", "<leader>rxd", "<cmd>RustOpenExternalDocs<Cr>", opts)

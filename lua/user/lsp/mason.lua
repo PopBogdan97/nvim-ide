@@ -16,6 +16,7 @@ local servers = {
 	"tflint",
 	"tsserver",
 	"yamlls",
+    "rust_analyzer",
 }
 
 local settings = {

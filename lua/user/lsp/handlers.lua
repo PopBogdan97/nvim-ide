@@ -81,9 +81,8 @@ M.on_attach = function(client, bufnr)
 	end
 
 	if client.name == "rust_analyzer" then
-		print("turned on codelens")
-		vim.lsp.codelens.refresh()
-	end
+	    require("user.rust")
+    end
 
 	lsp_keymaps(bufnr)
 	local status_ok, illuminate = pcall(require, "illuminate")
