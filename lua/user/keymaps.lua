@@ -23,9 +23,11 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Tabs --
-keymap("n", "<S-n>", ":tabnew %<cr>", opts)
-keymap("n", "<S-q>", ":tabclose<cr>", opts)
-keymap("n", "<S-o>", ":tabonly<cr>", opts)
+keymap("n", "<C-t>n", ":tabnew %<cr>", opts)
+keymap("n", "<C-t>q", ":tabclose<cr>", opts)
+keymap("n", "<C-t>o", ":tabonly<cr>", opts)
+keymap("n", "<C-t>f", ":tabnext<cr>", opts)
+keymap("n", "<C-t>b", ":tabprevious<cr>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
@@ -41,7 +43,7 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
 
 -- Close buffers
-keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
+keymap("n", "<C-q>", "<cmd>Bdelete!<CR>", opts)
 
 -- Better paste
 keymap("v", "p", '"_dP', opts)
