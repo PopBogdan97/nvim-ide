@@ -109,6 +109,7 @@ return packer.startup(function(use)
 			"nvim-telescope/telescope.nvim",
 		},
 	}) -- ChatGPT integration with vim
+	use({ "Exafunction/codeium.vim" }) -- Codeium AI code generator
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim" })
