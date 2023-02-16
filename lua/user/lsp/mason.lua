@@ -8,7 +8,7 @@ local servers = {
 	"jdtls",
 	"jsonls",
 	"lemminx",
-	"sumneko_lua",
+	"lua_ls",
 	"remark_ls",
 	"solc",
 	"taplo",
