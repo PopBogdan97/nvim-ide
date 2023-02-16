@@ -101,6 +101,14 @@ return packer.startup(function(use)
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
 	use({ "RRethy/vim-illuminate" })
 	use({ "simrat39/rust-tools.nvim" })
+	use({
+		"jackMort/ChatGPT.nvim",
+		requires = {
+			"MunifTanjim/nui.nvim",
+			"nvim-lua/plenary.nvim",
+			"nvim-telescope/telescope.nvim",
+		},
+	}) -- ChatGPT integration with vim
 
 	-- Telescope
 	use({ "nvim-telescope/telescope.nvim" })

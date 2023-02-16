@@ -23,5 +23,6 @@ require "user.dap"
 require "user.which-key"
 require "user.fidget"
 require "user.hop"
+require "user.chatgpt"
 
 vim.opt.guifont = { "Source Code Pro", ":h11" } -- Neovide configuration for font size
