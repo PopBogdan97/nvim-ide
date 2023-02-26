@@ -6,8 +6,20 @@ end
 telescope.load_extension("media_files")
 local actions = require("telescope.actions")
 
+local telescopeConfig = require("telescope.config")
+
+-- Clone the default Telescope configuration
+local vimgrep_arguments = { unpack(telescopeConfig.values.vimgrep_arguments) }
+
+-- I want to search in hidden/dot files.
+table.insert(vimgrep_arguments, "--hidden")
+-- I don't want to search in the `.git` directory.
+table.insert(vimgrep_arguments, "--glob")
+table.insert(vimgrep_arguments, "!**/.git/*")
+
 telescope.setup({
 	defaults = {
+		vimgrep_arguments = vimgrep_arguments,
 
 		extensions = {
 			media_files = {
@@ -28,9 +40,8 @@ telescope.setup({
 				["<Up>"] = actions.cycle_history_prev,
 				["<C-j>"] = actions.move_selection_next,
 				["<C-k>"] = actions.move_selection_previous,
-                -- ["<esc>"] = actions.close,
+				-- ["<esc>"] = actions.close,
 			},
 		},
 	},
 })
-
