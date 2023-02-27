@@ -67,7 +67,7 @@ return packer.startup(function(use)
 
 	-- FileSystem Explorer
 	use({ "kevinhwang91/rnvimr" }) -- File explorer and multimedia preview
-	use({ "kyazdani42/nvim-tree.lua" }) -- File explorer on side
+	use({ "kyazdani42/nvim-tree.lua", commit = "9c97e6449b0b0269bd44e1fd4857184dfa57bb4c" }) -- File explorer on side This commit was chosen because the latest one was breaking my configuration
 
 	-- Colorschemes
 	use({ "folke/tokyonight.nvim" })
