@@ -121,6 +121,9 @@ return packer.startup(function(use)
 	use({ "nvim-telescope/telescope.nvim" })
 	use({ "nvim-telescope/telescope-media-files.nvim" })
 
+	-- Auto-session
+	use({ "rmagatti/auto-session" })
+
 	-- Treesitter
 	use({ "nvim-treesitter/nvim-treesitter" })
 
