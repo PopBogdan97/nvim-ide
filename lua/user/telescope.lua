@@ -31,7 +31,9 @@ telescope.setup({
 		},
 		-- prompt_prefix = " ",
 		selection_caret = " ",
-		path_display = { "smart" },
+		path_display = { 
+            shorten = 10,
+        },
 		file_ignore_patterns = { ".git/", "node_modules" },
 
 		mappings = {
