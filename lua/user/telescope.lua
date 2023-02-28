@@ -4,7 +4,9 @@ if not status_ok then
 end
 
 telescope.load_extension("media_files")
+telescope.load_extension("live_grep_args")
 local actions = require("telescope.actions")
+local lga_actions = require("telescope-live-grep-args.actions")
 
 local telescopeConfig = require("telescope.config")
 
@@ -28,12 +30,16 @@ telescope.setup({
 				filetypes = { "png", "webp", "jpg", "jpeg", "pdf" },
 				find_cmd = "rg", -- find command (defaults to `fd`)
 			},
+
+			live_grep_args = {
+				auto_quoting = true, -- enable/disable auto-quoting
+			}
 		},
 		-- prompt_prefix = " ",
 		selection_caret = " ",
-		path_display = { 
-            shorten = 10,
-        },
+		path_display = {
+			shorten = 10,
+		},
 		file_ignore_patterns = { ".git/", "node_modules" },
 
 		mappings = {
@@ -42,6 +48,8 @@ telescope.setup({
 				["<Up>"] = actions.cycle_history_prev,
 				["<C-j>"] = actions.move_selection_next,
 				["<C-k>"] = actions.move_selection_previous,
+				["<C-o>"] = lga_actions.quote_prompt(),
+				["<C-i>"] = lga_actions.quote_prompt({ postfix = " --iglob " }),
 				-- ["<esc>"] = actions.close,
 			},
 		},

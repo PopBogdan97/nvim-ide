@@ -84,10 +84,11 @@ keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
 -- Telescope
 keymap("n", "<leader>ff", ":Telescope find_files<CR>", opts)
-keymap("n", "<leader>fw", ":Telescope live_grep<CR>", opts)
+keymap("n", "<leader>fg", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fp", ":Telescope projects<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 keymap("n", "<leader>fm", ":Telescope media_files<CR>", opts)
+keymap("n", "<leader>fw", ":lua require('telescope').extensions.live_grep_args.live_grep_args()<CR>", opts)
 
 -- Hop
 keymap("n", "s", ":HopChar2<CR>", opts)
