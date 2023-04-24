@@ -101,14 +101,14 @@ return packer.startup(function(use)
 	use({ "jose-elias-alvarez/null-ls.nvim" }) -- for formatters and linters
 	use({ "RRethy/vim-illuminate" })
 	use({ "simrat39/rust-tools.nvim" })
-	use({
-		"jackMort/ChatGPT.nvim",
-		requires = {
-			"MunifTanjim/nui.nvim",
-			"nvim-lua/plenary.nvim",
-			"nvim-telescope/telescope.nvim",
-		},
-	}) -- ChatGPT integration with vim
+	-- use({
+	-- 	"jackMort/ChatGPT.nvim",
+	-- 	requires = {
+	-- 		"MunifTanjim/nui.nvim",
+	-- 		"nvim-lua/plenary.nvim",
+	-- 		"nvim-telescope/telescope.nvim",
+	-- 	},
+	-- }) -- ChatGPT integration with vim
 	-- use({ "Exafunction/codeium.vim" }) -- Codeium AI code generator
 	-- use({ "github/copilot.vim" }) -- Copilot AI code generator
 	use({ "zbirenbaum/copilot.lua" }) -- Copilot AI code generator
