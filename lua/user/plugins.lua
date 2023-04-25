@@ -63,7 +63,7 @@ return packer.startup(function(use)
 	use({ "j-hui/fidget.nvim" })
 	use({ "folke/which-key.nvim" })
 	use({ "nvim-lua/popup.nvim" })
-	use({ "terryma/vim-multiple-cursors" })
+	use({ "mg979/vim-visual-multi" })
 
 	-- FileSystem Explorer
 	use({ "kevinhwang91/rnvimr" }) -- File explorer and multimedia preview
